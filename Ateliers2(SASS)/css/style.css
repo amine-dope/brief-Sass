@@ -1,0 +1,107 @@
+.form__button-div--submit {
+  padding: 1.2em 2em;
+  background: none;
+  border: none;
+  border-radius: 20px;
+  color: white; }
+
+body {
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: 'Libre Franklin', sans-serif; }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90px;
+  padding-top: 4rem;
+  padding-bottom: 2rem; }
+
+.container__soon {
+  justify-content: center;
+  display: flex;
+  margin-top: 5px; }
+  .container__soon--title {
+    font-weight: normal;
+    color: gray;
+    padding-right: 0.3em; }
+
+.container__subscribe--text {
+  justify-content: center;
+  display: flex;
+  font-weight: normal; }
+
+.form {
+  justify-content: center;
+  display: flex; }
+  .form__input-div {
+    padding-right: 10px; }
+    .form__input-div--email {
+      border-radius: 20px;
+      width: 400px;
+      padding: 1.2em 2em;
+      border: 1px solid #969696; }
+      .form__input-div--email:hover {
+        box-shadow: 3px 4px 35px -6px #c2d3ff; }
+  .form__button-div--submit {
+    background-color: #4f7df3;
+    width: 100px; }
+    .form__button-div--submit:hover {
+      box-shadow: 3px 4px 35px -6px #c2d3ff; }
+
+.dash {
+  text-align: center;
+  height: 40rem;
+  margin-top: 3rem; }
+  .dash__dashboard {
+    width: 60%;
+    display: inline-block;
+    padding-top: 40px; }
+
+#social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px; }
+  #social .fab {
+    color: #4f7df3;
+    margin: 0 1em;
+    padding: 0.5em;
+    border-radius: 50%;
+    border: 1px solid #c2d3ff; }
+    #social .fab:hover {
+      background-color: #c2d3ff; }
+
+h4 {
+  display: flex;
+  justify-content: center;
+  color: silver;
+  font-size: 0.6em;
+  font-weight: normal; }
+
+footer .attribution {
+  color: #4f7df3; }
+  footer .attribution a {
+    text-decoration: none;
+    color: #4f7df3; }
+
+@media only screen and (max-width: 600px) {
+  .form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch; }
+    .form__input-div--email {
+      width: 250px;
+      margin-bottom: 2em;
+      margin-right: 0em; }
+    .form__button-div--submit {
+      width: 300px; }
+  .dash {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+    height: 20rem; }
+    .dash__dashboard {
+      width: 90%; } }

@@ -1,0 +1,181 @@
+$color-blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$dark-blue: hsl(209, 33%, 12%);
+$color-silver: silver;
+$width-responsive: 600px;
+
+@mixin hover {
+    &:hover {
+      box-shadow: 3px 4px 35px -6px hsl(223, 100%, 88%);
+    }
+  }
+  
+  @mixin btn {
+    background-color: $color-blue;
+    width: $width-responsive/6;
+  }
+  
+  %btn {
+    padding: 1.2em 2em;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    color: white;
+  }
+
+body {
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90px;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
+}
+
+.container {
+
+    &__soon {
+        justify-content: center;
+        display: flex;
+        margin-top: 5px;
+
+        &--title {
+
+            font-weight: normal;
+            color: gray;
+            padding-right: 0.3em;
+        }
+    }
+
+    &__subscribe {
+        &--text{
+            justify-content: center;
+        display: flex;
+        font-weight: normal;
+        }
+        
+
+    }
+    
+
+}
+
+.form {
+    justify-content: center;
+    display: flex;
+
+    &__input-div {
+        padding-right: 10px;
+        &--email {
+            border-radius: 20px;
+            width: $width-responsive/1.5;
+            padding: 1.2em 2em;
+            border: 1px solid $gray;
+
+            @include hover();
+        }
+    }
+
+    &__button-div {
+        &--submit {
+            @extend %btn;
+            @include hover();
+            @include btn();
+        }
+    }
+}
+
+.dash {
+    //display: flex;
+    //justify-content: center;
+    text-align: center;
+    height: 40rem;
+    margin-top: 3rem;
+
+    &__dashboard {
+        width: 60%;
+        display: inline-block;
+        padding-top: 40px;
+
+    }
+
+}
+#social{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+   .fab{
+         color: $color-blue;
+         margin: 0 1em;
+            padding: 0.5em;
+            border-radius: 50%;
+            border: 1px solid $pale-blue;
+        &:hover {
+            background-color: $pale-blue;
+        }
+    }
+}
+h4 {
+    display: flex;
+    justify-content: center;
+    color: $color-silver;
+    font-size :0.6em ;
+    font-weight: normal;
+}
+footer {
+    
+    .attribution {
+      color: $color-blue;
+      
+  
+      a {
+        text-decoration: none;
+        color: $color-blue;
+      }
+    }
+}
+@media only screen and (max-width: 600px) {
+
+  
+    .form {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: stretch;
+      align-content: stretch;
+  
+      &__input-div {
+        &--email {
+          width: $width-responsive/2.4;
+          margin-bottom: 2em;
+          margin-right: 0em;
+        }
+      }
+      &__button-div {
+        &--submit {
+          width: $width-responsive/2;
+        }
+      }
+    }
+    .dash {
+       display: flex;
+       justify-content: center;
+       padding-bottom: 2em;
+  
+      height: 20rem;
+  
+      &__dashboard {
+        width: 90%;
+      }
+    }
+ }
